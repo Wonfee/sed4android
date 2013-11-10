@@ -1,0 +1,23 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+	sed.c \
+	compile.c \
+	execute.c \
+	regexp.c \
+	fmt.c \
+	mbcs.c \
+	utils.c \
+
+LOCAL_C_INCLUDES := \
+	$(LOCAL_PATH) \
+	$(LOCAL_PATH)/.. \
+	$(LOCAL_PATH)/../lib \
+
+LOCAL_STATIC_LIBRARIES += libsed-4.2.1.a
+
+LOCAL_CFLAGS += -DHAVE_CONFIG_H
+LOCAL_MODULE := sed
+include $(CLEAR_VARS)

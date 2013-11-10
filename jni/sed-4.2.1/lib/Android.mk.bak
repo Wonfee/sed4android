@@ -1,0 +1,32 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+	set-mode-acl.c \
+	copy-acl.c \
+	file-has-acl.c \
+	c-ctype.c \
+	localcharset.c \
+	xalloc-die.c \
+	xstrndup.c \
+	basename.c \
+	dirname.c \
+	exitfail.c \
+	quote.c \
+	quotearg.c \
+	regex.c \
+	stripslash.c \
+	tempname.c \
+	xmalloc.c \
+
+LOCAL_C_INCLUDES += \
+	$(LOCAL_PATH) \
+	$(LOCAL_PATH)/.. \
+	$(LOCAL_PATH)/sys \
+
+LOCAL_CFLAGS += -DHAVE_CONFIG_H
+
+LOCAL_MODULE := libsed-4.2.1
+include $(BUILD_STATIC_LIBRARY)
+
