@@ -51,7 +51,7 @@ LOCAL_C_INCLUDES := \
 	$(LOCAL_PATH) \
 	$(LOCAL_PATH)/lib/ \
 	$(LOCAL_PATH)/sed/ \
-	$(LOCAL_PATH)/../libselinux/include \
+	$(LOCAL_PATH)/../selinux/include \
 
 LOCAL_STATIC_LIBRARIES += libsed-4.2.1 libselinux
 
